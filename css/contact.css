@@ -1,0 +1,147 @@
+.contact {
+    min-height: 100vh;
+}
+
+.contact__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.contact-page {
+    justify-content: unset;
+    gap: 0;
+    margin-top: 11rem;
+    margin-bottom: 4rem;
+}
+
+.contact-page .contact__title {
+    margin-bottom: 2rem;
+}
+
+.contact__title {
+    max-width: 28rem;
+    font-size: var(--font-size-3);
+    font-weight: var(--font-weight-regular);
+    line-height: 32px;
+    text-align: center;
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    max-width: 30rem;
+    width: 100%;
+}
+
+.contact__form label {
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 0.5rem;
+}
+
+.contact__form input,
+.contact__form textarea {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--color-primary);
+    border-radius: 0.5rem;
+    background: none;
+}
+
+.contact__form input {
+    margin-bottom: 1.5rem;
+}
+
+.contact__form textarea {
+    height: 7rem;
+    margin-bottom: 2rem;
+    resize: vertical;
+}
+
+:focus-visible {
+    outline-color: var(--color-blue);
+    background-color: var(--color-secondary);
+}
+
+::placeholder {
+    color: var(--color-primary);
+}
+
+.contact__button {
+    background-color: var(--color-blue);
+}
+
+.contact__flower {
+    position: absolute;
+    z-index: -1;
+}
+
+.contact__flower:first-of-type {
+    top: 6rem;
+    left: 8rem;
+}
+
+.contact-page .contact__flower:first-of-type {
+    top: -1rem;
+}
+
+.contact__flower:last-of-type {
+    right: 8rem;
+    bottom: 6rem;
+}
+
+.contact__mail {
+    position: absolute;
+    top: 50%;
+    right: -3rem;
+    width: 10rem;
+    transform: rotate(-90deg) translateX(50%);
+}
+
+@media screen and (max-width: 768px) {
+
+    .contact-page .contact__flower:first-of-type {
+        left: 1rem;
+        opacity: 25%;
+    }
+
+    .contact-page .contact__flower:last-of-type {
+        right: 2rem;
+        opacity: 25%;
+    }
+
+}
+
+@media screen and (max-width: 425px) {
+
+    .contact-page {
+        margin-top: 9rem;
+    }
+
+    .contact__inner {
+        padding-inline: 0;
+    }
+
+    .contact__title {
+        font-size: var(--font-size-2);
+        line-height: 32px;
+    }
+
+    .contact__flower:first-of-type {
+        top: 10%;
+        left: 2rem;
+    }
+
+    .contact__flower:last-of-type {
+        bottom: 10%;
+        right: 2rem;
+    }
+
+    .contact__mail {
+        position: unset;
+        transform: rotate(0deg);
+        margin-top: 1rem;
+    }
+
+}

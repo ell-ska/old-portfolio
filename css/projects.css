@@ -1,0 +1,238 @@
+/* Individual projects */
+.favorite-sounds {
+    --project-color: var(--color-pink);
+}
+
+.marvel {
+    --project-color: var(--color-green)
+}
+
+.truckzter {
+    --project-color: var(--color-pink)
+}
+
+.mastermind {
+    --project-color: var(--color-blue);
+}
+
+/* General styling */
+.projects {
+    margin-top: 12rem;
+}
+
+.projects__inner {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: var(--grid-container);
+    padding: 0;
+}
+
+.projects__title {
+    grid-column: 2;
+    margin: 0 0 2rem 4rem;
+}
+
+.projects__nav {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    padding-inline: 2rem;
+    border-bottom: 1px solid var(--color-primary);
+}
+
+.projects__nav .nav-item {
+    padding: 4px 2rem;
+    width: 100%;
+    font-size: var(--font-size-1);
+    font-weight: var(--font-weight-regular);
+    text-align: center;
+}
+
+.projects__nav .nav-item--active {
+    border-radius: 1rem 1rem 0 0;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    font-weight: var(--font-weight-bold);
+}
+
+/* Project */
+.project {
+    position: relative;
+    display: none;
+    grid-column: 1 / -1;
+    min-height: 17rem;
+    color: var(--color-primary);
+}
+
+.project--visible {
+    display: grid;
+}
+
+.project:hover {
+    --color-primary: var(--color-secondary);
+}
+
+.project:hover .project__button {
+    display: flex;
+}
+
+.project:hover .project__image-wrapper {
+    transform: scale(1, 1);
+}
+
+.project:hover .project__image-overlay {
+    transform: translateY(100%);
+}
+
+.project__link-wrapper {
+    display: grid;
+    grid-template-columns: 6rem 1fr 6rem;
+    align-items: center;
+    border-bottom: 1px solid var(--color-primary);
+}
+
+.project__image-mask {
+    z-index: -1;
+    inset: 0;
+    position: absolute;
+    overflow: hidden;
+}
+
+.project__image-wrapper {
+    inset: 0;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    transform: scale(1.3, 1.3);
+    transition: transform .7s ease;
+}
+
+.project__image-overlay {
+    inset: 0;
+    position: absolute;
+    display: block;
+    background: var(--color-secondary);
+    transition: all .3s ease;
+}
+
+.project__info {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.project__title-section {
+    grid-column: 1;
+}
+
+.project__roles {
+    display: flex;
+    gap: 1rem;
+    margin-top: 5px;
+    font-size: var(--font-size-2);
+}
+
+.project__roles svg {
+    width: 1.5rem;
+    height: auto;
+}
+
+.project__flower svg path {
+    fill: var(--project-color);
+}
+
+.project__desc-section {
+    margin-left: 5rem;
+}
+
+.project__desc {
+    font-weight: var(--font-weight-regular);
+}
+
+.project__button {
+    display: none;
+    position: absolute;
+    bottom: 2rem;
+    align-items: center;
+    gap: 1rem;
+    transition: gap .3s;
+}
+
+.project__button:hover {
+    gap: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+
+    .projects__title {
+        margin: 0 0 1rem 1rem;
+    }
+
+    .projects__nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .5rem;
+        padding: 0;
+        padding-bottom: 2rem;
+    }
+
+    .projects__nav .nav-item {
+        width: auto;
+        padding-left: 2rem;
+    }
+
+    .projects__nav .nav-item--active {
+        border-radius: 0 1rem 1rem 0;
+    }
+    
+    .project {
+        --color-primary: var(--color-secondary);
+
+        height: 100vh;
+    }
+
+    .project__link-wrapper {
+        display: block;
+    }
+
+    .project__image-wrapper {
+        transform: scale(1, 1);
+    }
+
+    .project__image-wrapper img {
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .project__image-overlay {
+        background-color: var(--color-primary-75);
+
+    }
+
+    .project__info {
+        display: flex;
+        flex-direction: column;
+        padding: 5rem 2rem;
+        gap: 2rem;
+    }
+
+    .project__roles {
+        font-size: var(--font-size-1);
+    }
+
+    .project__desc-section {
+        margin: 0;
+    }
+
+    .project__button {
+        display: flex;
+        bottom: 5rem;
+    }
+
+    .project__button svg path{
+        stroke: var(--color-primary);
+    }
+
+}

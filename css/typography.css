@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'Sofia Pro';
+    font-weight: 400;
+    src: url('../assets/fonts/Sofia-Pro/SofiaPro-Regular.woff') format('woff'),
+         url('../assets/fonts/Sofia-Pro/SofiaPro-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    font-weight: 700;
+    src: url('../assets/fonts/Sofia-Pro/SofiaPro-Bold.woff') format('woff'),
+         url('../assets/fonts/Sofia-Pro/SofiaPro-Bold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    font-weight: 800;
+    src: url('../assets/fonts/Sofia-Pro/SofiaPro-Black.woff') format('woff'),
+         url('../assets/fonts/Sofia-Pro/SofiaPro-Black.woff2') format('woff2');
+}
+
+h1, h2 {
+    font-size: var(--font-size-6);
+    font-weight: var(--font-weight-black);
+    line-height: 72px;
+}
+
+h3 {
+    font-size: var(--font-size-3);
+    font-weight: var(--font-weight-regular);
+    line-height: 2rem;
+}
+
+p {
+    font-size: var(--font-size-1);
+    line-height: 2;
+}
+
+@media screen and (max-width: 425px) {
+
+    h1, h2 {
+        font-size: var(--font-size-4);
+        line-height: 48px;
+    }
+
+}

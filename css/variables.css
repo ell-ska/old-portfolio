@@ -1,0 +1,38 @@
+:root {
+
+    --app-height: 100%;
+
+    --section-inline-padding: 4rem;
+
+    --grid-container: minmax(2rem, 1fr) minmax(0, 86rem) minmax(2rem, 1fr);
+
+    --color-primary: #111C26;
+    --color-primary-75: #111C26BF;
+    --color-secondary: #FFF;
+    --color-blue: #A3CBF0;
+    --color-blue-25: #A3CBF040;
+    --color-pink: #EB9DBB;
+    --color-green: #00C28A;
+    
+    --font-primary: "Sofia Pro", sans-serif;
+    --font-base: 1rem;
+    --font-scale: 1.25;
+    --font-size-0: calc(var(--font-base) / var(--font-scale));
+    --font-size-1: var(--font-base);
+    --font-size-2: calc(var(--font-size-1) * var(--font-scale));
+    --font-size-3: calc(var(--font-size-2) * var(--font-scale));
+    --font-size-4: calc(var(--font-size-3) * var(--font-scale));
+    --font-size-5: calc(var(--font-size-4) * var(--font-scale));
+    --font-size-6: calc(var(--font-size-5) * var(--font-scale));
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+    --font-weight-black: 800;
+}
+
+@media screen and (max-width: 768px) {
+    :root {
+        --section-inline-padding: 1rem;
+
+        --grid-container: minmax(1rem, 1fr) minmax(0, 86rem) minmax(1rem, 1fr);
+    }
+}

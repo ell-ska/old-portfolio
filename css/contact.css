@@ -3,15 +3,23 @@
 }
 
 .contact__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     gap: 2rem;
 }
 
 .contact-page {
-    justify-content: unset;
     gap: 0;
     margin-top: 11rem;
     margin-bottom: 4rem;
@@ -30,7 +38,12 @@
 }
 
 .contact__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     max-width: 30rem;
     width: 100%;
@@ -62,6 +75,22 @@
 :focus-visible {
     outline-color: var(--color-blue);
     background-color: var(--color-secondary);
+}
+
+::-webkit-input-placeholder {
+    color: var(--color-primary);
+}
+
+::-moz-placeholder {
+    color: var(--color-primary);
+}
+
+:-ms-input-placeholder {
+    color: var(--color-primary);
+}
+
+::-ms-input-placeholder {
+    color: var(--color-primary);
 }
 
 ::placeholder {
@@ -96,6 +125,8 @@
     top: 50%;
     right: -3rem;
     width: 10rem;
+    -webkit-transform: rotate(-90deg) translateX(50%);
+    -ms-transform: rotate(-90deg) translateX(50%);
     transform: rotate(-90deg) translateX(50%);
 }
 
@@ -140,6 +171,8 @@
 
     .contact__mail {
         position: unset;
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
         transform: rotate(0deg);
         margin-top: 1rem;
     }

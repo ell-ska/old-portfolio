@@ -3,7 +3,9 @@
 }
 
 .introduction__inner {
+   display: -ms-grid;
    display: grid;
+   -ms-grid-columns: 2fr 1fr;
    grid-template-columns: 2fr 1fr;
 }
 
@@ -22,6 +24,8 @@
 }
 
 .introduction__image {
+    -ms-grid-row-align: center;
+    -ms-grid-column-align: center;
     place-self: center;
     max-width: 15.5rem;
 }
@@ -53,7 +57,9 @@
 }
 
 .experience {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: var(--grid-container);
     grid-template-columns: var(--grid-container);
     border-top: 1px solid var(--color-primary);
 }
@@ -64,18 +70,29 @@
 }
 
 .experience:hover .experience__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
 .experience__inner {
     position: relative;
+    -ms-grid-column: 2;
     grid-column: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
 .experience__title-area {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: -webkit-max-content 5rem -webkit-max-content 5rem -webkit-max-content;
+    -ms-grid-columns: max-content 5rem max-content 5rem max-content;
+    grid-template-columns: repeat(3, -webkit-max-content);
     grid-template-columns: repeat(3, max-content);
+    -webkit-column-gap: 5rem;
+    -moz-column-gap: 5rem;
     column-gap: 5rem;
     padding: 2rem 4rem;
 }
@@ -88,11 +105,14 @@
 
 .experience__place {
     font-weight: var(--font-weight-regular);
+    -ms-grid-column: 2;
     grid-column: 2;
 }
 
 .experience__link {
     display: none;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     gap: 1rem;
 }
@@ -103,18 +123,10 @@
     font-weight: var(--font-weight-regular);
 }
 
-@media screen and (max-width: 425px) {
-    
-    .introduction {
-        margin-top: 9rem;
-    }
-
-    .introduction__inner {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
+@media screen and (max-width: 768px) {
 
     .experience__title-area {
+        -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
         padding: 1.5rem 0;
     }
@@ -140,6 +152,20 @@
 
     .experience__place {
         grid-column: unset;
+    }
+    
+}
+
+@media screen and (max-width: 425px) {
+    
+    .introduction {
+        margin-top: 9rem;
+    }
+
+    .introduction__inner {
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
 
 }
